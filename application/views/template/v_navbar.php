@@ -15,13 +15,13 @@
 
     <ul class="navbar-nav ml-auto">
       <li class="nav-item dropdown no-arrow">
-        <a class="nav-link <?php if($title == $this->session->userdata('user_fullname')) : ?>active<?php endif ?>" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <img class="img-profilee rounded-circle" src="<?= base_url('assets/img/profile/'.$this->session->userdata('user_photo')) ?>" style="width: 30px">
-          <span class="ml-2 d-lg-inline small"><?= $this->session->userdata('user_fullname') ?></span>
+        <a class="nav-link <?php if($title == $user['user_fullname']) : ?>active<?php endif ?>" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <img class="img-profilee rounded-circle" src="<?= base_url('assets/img/profile/'.$user['user_photo']) ?>" style="width: 30px">
+          <span class="ml-2 d-lg-inline text-sm"><?= $user['user_fullname'] ?></span>
         </a>
 
         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-          <a class="dropdown-item" href="<?= base_url('profile') ?>">
+          <a class="dropdown-item" href="<?= base_url('profile/'.$user['user_username']) ?>">
             <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
             Profile
           </a>

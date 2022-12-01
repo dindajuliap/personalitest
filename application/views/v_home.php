@@ -1,10 +1,9 @@
-<h1 align="center" class="mt-3"><b>Welcome to PersonaliTest!</b></h1>
+<h1 align="center" class="mt-4"><b>Welcome to PersonaliTest</b></h1>
 
 <p class="text-muted mx-5 px-lg-5 px-md-3 px-sm-3 text-center">
-  Etiam eleifend ullamcorper eros eu pulvinar. Cras hendrerit risus magna, eget lobortis nulla
-  congue ut. Proin nec arcu elit. Nulla interdum metus quis leo malesuada consequat. Orci varius
-  natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec eget auctor
-  erat. Suspendisse efficitur erat quis metus euismod consectetur.
+  Do you already know about yourself? Have you ever asked what you look like in the eyes of
+  others? To find out this, you can take some of the tests that we provide on this website.
+  Let's do the test right away by pressing the button below!
 </p>
 
 <div class="text-center">
@@ -13,10 +12,10 @@
   </a>
 </div>
 
-<div class="row mx-0">
+<div class="row mx-0 mt-3">
   <div class="col-lg-12 col-md-12 col-sm-12">
     <div class="text-center">
-      <img src="<?= base_url('assets/img/illustration-3.png') ?>" id="illustration">
+      <img src="<?= base_url('assets/img/photo-3.png') ?>" id="illustration">
     </div>
   </div>
 </div>

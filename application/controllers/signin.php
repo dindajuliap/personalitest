@@ -36,18 +36,10 @@
             if(password_verify($this->input->post('user_password'), $user['user_password'])){
               $data = [
                 'user_id'       => $user['user_id'],
-                'user_email'    => $user['user_email'],
-                'user_fullname' => $user['user_fullname'],
-                'user_username' => $user['user_username'],
-                'user_phone'    => $user['user_phone'],
-                'user_level'    => $user['user_level'],
-                'user_photo'    => $user['user_photo'],
-                'user_status'   => $user['user_status'],
-                'user_password' => $user['user_password'],
                 'signin_status' => TRUE
               ];
               $this->session->set_userdata($data);
-              $this->session->set_flashdata('success','Welcome, '.$data['user_fullname'].'!');
+              $this->session->set_flashdata('success','Welcome, '.$user['user_fullname'].'!');
 
               if($user['user_level'] == 'User'){
                 redirect('home');
