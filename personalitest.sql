@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 01, 2022 at 09:01 AM
+-- Generation Time: Dec 01, 2022 at 10:51 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -197,69 +197,93 @@ INSERT INTO `answer_table` (`answer_id`, `question_id`, `answer_choice`, `answer
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `profile_picture_table`
+--
+
+CREATE TABLE `profile_picture_table` (
+  `profile_picture_id` int(11) NOT NULL,
+  `profile_picture` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `profile_picture_table`
+--
+
+INSERT INTO `profile_picture_table` (`profile_picture_id`, `profile_picture`) VALUES
+(1, 'avatar-1.png'),
+(2, 'avatar-2.png'),
+(3, 'avatar-3.png'),
+(4, 'avatar-4.png'),
+(5, 'avatar-5.png'),
+(6, 'avatar-6.png'),
+(7, 'avatar-7.png'),
+(8, 'avatar-8.png');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `question_table`
 --
 
 CREATE TABLE `question_table` (
   `question_id` int(11) NOT NULL,
   `question_type_id` int(11) NOT NULL,
-  `question` text NOT NULL,
-  `question_status` enum('Available','Not available') NOT NULL
+  `question` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `question_table`
 --
 
-INSERT INTO `question_table` (`question_id`, `question_type_id`, `question`, `question_status`) VALUES
-(1, 1, 'Which one describes you best?', 'Available'),
-(2, 1, 'Which one describes you best?', 'Available'),
-(3, 1, 'Which one describes you best?', 'Available'),
-(4, 1, 'Which one describes you best?', 'Available'),
-(5, 1, 'Which one describes you best?', 'Available'),
-(6, 1, 'Which one describes you best?', 'Available'),
-(7, 1, 'Which one describes you best?', 'Available'),
-(8, 1, 'Which one describes you best?', 'Available'),
-(9, 1, 'Which one describes you best?', 'Available'),
-(10, 1, 'Which one describes you best?', 'Available'),
-(11, 1, 'Which one describes you best?', 'Available'),
-(12, 1, 'Which one describes you best?', 'Available'),
-(13, 1, 'Which one describes you best?', 'Available'),
-(14, 1, 'Which one describes you best?', 'Available'),
-(15, 1, 'Which one describes you best?', 'Available'),
-(16, 1, 'Which one describes you best?', 'Available'),
-(17, 1, 'Which one describes you best?', 'Available'),
-(18, 1, 'Which one describes you best?', 'Available'),
-(19, 1, 'Which one describes you best?', 'Available'),
-(20, 1, 'Which one describes you best?', 'Available'),
-(21, 2, 'Which one describes you best?', 'Available'),
-(22, 2, 'Which one describes you best?', 'Available'),
-(23, 2, 'Which one describes you best?', 'Available'),
-(24, 2, 'Which one describes you best?', 'Available'),
-(25, 2, 'Which one describes you best?', 'Available'),
-(26, 2, 'Which one describes you best?', 'Available'),
-(27, 2, 'Which one describes you best?', 'Available'),
-(28, 2, 'Which one describes you best?', 'Available'),
-(29, 2, 'Which one describes you best?', 'Available'),
-(30, 2, 'Which one describes you best?', 'Available'),
-(31, 3, 'When you meet strangers or meet a new people, what\'s the first thing that you notice?', 'Available'),
-(32, 3, 'After a long time of not seeing your brother/sister or friends, what\'s the first thing you remember about them?', 'Available'),
-(33, 3, 'If you had to enter a room you\'ve never been in before, what would you notice first?', 'Available'),
-(34, 3, 'Which method is the most fun for you?', 'Available'),
-(35, 3, 'If you become a trainer, then what will you do?', 'Available'),
-(36, 3, 'Which type of book is your favorite?', 'Available'),
-(37, 3, 'If you have free time, what activities will you do?', 'Available'),
-(38, 3, 'You are given the opportunity to study with the best atmosphere, which of the following choices do you like the most?', 'Available'),
-(39, 3, 'When you\'re talking to someone else, where do you look?', 'Available'),
-(40, 3, 'Which one describes you best?', 'Available'),
-(41, 3, 'If you wanted to make or try something, then what would you do?', 'Available'),
-(42, 3, 'If you were given the task of remembering words that you never know before, what would you do?', 'Available'),
-(43, 3, 'Which do you think is the most effective way to memorize?', 'Available'),
-(44, 3, 'What will you do if you encounter a situation that doesn\'t meet your expectations?', 'Available'),
-(45, 3, 'This morning, you got a call from a relative and had to convey the message to Mother. What are you going to do so you don\'t forget?', 'Available'),
-(46, 3, 'Which do you find more annoying?', 'Available'),
-(47, 3, 'Which game is the most interesting?', 'Available'),
-(48, 3, 'When someone asks you for directions, what will you do?', 'Available');
+INSERT INTO `question_table` (`question_id`, `question_type_id`, `question`) VALUES
+(1, 1, 'Which one describes you best?'),
+(2, 1, 'Which one describes you best?'),
+(3, 1, 'Which one describes you best?'),
+(4, 1, 'Which one describes you best?'),
+(5, 1, 'Which one describes you best?'),
+(6, 1, 'Which one describes you best?'),
+(7, 1, 'Which one describes you best?'),
+(8, 1, 'Which one describes you best?'),
+(9, 1, 'Which one describes you best?'),
+(10, 1, 'Which one describes you best?'),
+(11, 1, 'Which one describes you best?'),
+(12, 1, 'Which one describes you best?'),
+(13, 1, 'Which one describes you best?'),
+(14, 1, 'Which one describes you best?'),
+(15, 1, 'Which one describes you best?'),
+(16, 1, 'Which one describes you best?'),
+(17, 1, 'Which one describes you best?'),
+(18, 1, 'Which one describes you best?'),
+(19, 1, 'Which one describes you best?'),
+(20, 1, 'Which one describes you best?'),
+(21, 2, 'Which one describes you best?'),
+(22, 2, 'Which one describes you best?'),
+(23, 2, 'Which one describes you best?'),
+(24, 2, 'Which one describes you best?'),
+(25, 2, 'Which one describes you best?'),
+(26, 2, 'Which one describes you best?'),
+(27, 2, 'Which one describes you best?'),
+(28, 2, 'Which one describes you best?'),
+(29, 2, 'Which one describes you best?'),
+(30, 2, 'Which one describes you best?'),
+(31, 3, 'When you meet strangers or meet a new people, what\'s the first thing that you notice?'),
+(32, 3, 'After a long time of not seeing your brother/sister or friends, what\'s the first thing you remember about them?'),
+(33, 3, 'If you had to enter a room you\'ve never been in before, what would you notice first?'),
+(34, 3, 'Which method is the most fun for you?'),
+(35, 3, 'If you become a trainer, then what will you do?'),
+(36, 3, 'Which type of book is your favorite?'),
+(37, 3, 'If you have free time, what activities will you do?'),
+(38, 3, 'You are given the opportunity to study with the best atmosphere, which of the following choices do you like the most?'),
+(39, 3, 'When you\'re talking to someone else, where do you look?'),
+(40, 3, 'Which one describes you best?'),
+(41, 3, 'If you wanted to make or try something, then what would you do?'),
+(42, 3, 'If you were given the task of remembering words that you never know before, what would you do?'),
+(43, 3, 'Which do you think is the most effective way to memorize?'),
+(44, 3, 'What will you do if you encounter a situation that doesn\'t meet your expectations?'),
+(45, 3, 'This morning, you got a call from a relative and had to convey the message to Mother. What are you going to do so you don\'t forget?'),
+(46, 3, 'Which do you find more annoying?'),
+(47, 3, 'Which game is the most interesting?'),
+(48, 3, 'When someone asks you for directions, what will you do?');
 
 -- --------------------------------------------------------
 
@@ -271,18 +295,17 @@ CREATE TABLE `question_type_table` (
   `question_type_id` int(11) NOT NULL,
   `question_type` text NOT NULL,
   `question_type_description` varchar(200) NOT NULL,
-  `question_type_cover` text NOT NULL,
-  `question_type_status` enum('Available','Not available') NOT NULL
+  `question_type_cover` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `question_type_table`
 --
 
-INSERT INTO `question_type_table` (`question_type_id`, `question_type`, `question_type_description`, `question_type_cover`, `question_type_status`) VALUES
-(1, 'Choleric, Phlegmatic, Melancholic, and Sanguine', '<p>This test divides human character into four different temperaments, which are the basis of the color of human character which acts as a representation of the individual\'s life.</p>', 'type-1.png', 'Available'),
-(2, 'Extroverted, Introverted, and Ambiverted', '<p>This test divides human character into three different characters, which are divided based on how an individual interacts and reacts to the environment around.</p>', 'type-2.png', 'Available'),
-(3, 'Visual, Auditory, and Kinesthetic', '<p>This test divides human character into three parts, which are divided based on the appropriate learning style for an individual.</p>', 'type-3.png', 'Available');
+INSERT INTO `question_type_table` (`question_type_id`, `question_type`, `question_type_description`, `question_type_cover`) VALUES
+(1, 'Choleric, Phlegmatic, Melancholic, and Sanguine', '<p>This test divides human character into four different temperaments, which are the basis of the color of human character which acts as a representation of the individual\'s life.</p>', 'type-1.png'),
+(2, 'Extroverted, Introverted, and Ambiverted', '<p>This test divides human character into three different characters, which are divided based on how an individual interacts and reacts to the environment around.</p>', 'type-2.png'),
+(3, 'Visual, Auditory, and Kinesthetic', '<p>This test divides human character into three parts, which are divided based on the appropriate learning style for an individual.</p>', 'type-3.png');
 
 -- --------------------------------------------------------
 
@@ -302,10 +325,10 @@ CREATE TABLE `result_description_table` (
 --
 
 INSERT INTO `result_description_table` (`result_description_id`, `result_description_title`, `result_description`, `result_description_photo`) VALUES
-(1, 'Choleric', '<p><b>Characteristics</b></p><ul><li>Have a good leadership spirit</li><li>Has greater strength than those peoples around</li><li>Want to look qualified especially in the field of education</li><li>Always wanting to be right</li><li>Want to be respected</li><li>Always trying to hide the fear</li><li>Pleasure oriented</li><li>Like challenges</li></ul><br><p><b>Advantages</b></p><ul><li>Independent</li><li>Have clear goals</li><li>Know how to solve problems</li><li>Can be a good organizer and executor</li><li>Visionary</li><li>Have high expectations of others</li></ul><br><p><b>Disadvantages</b></p><ul><li>Thinks he is perfect</li><li>No morals</li><li>Hard to forgive someone</li><li>Do not want to give in even though wrong</li><li>Wrong things are often brought up</li><li>Cruel</li><li>Want loyalty</li></ul>', 'chole.png'),
-(2, 'Phlegmatic', '<p><b>Characteristics</b></p><ul><li>Calm personality and likes serenity</li><li>Want to feel the pleasure that comes from yourself</li><li>Always want to be understood</li><li>Want to be respected</li><li>Often feel insecure and do not hesitate to show it to others</li><li>Feel happy when others are happy</li><li>Have a desire to be protected</li><li>Want pleasure for yourself</li></ul><br><p><b>Advantages</b></p><ul><li>Can be a good peacemaker</li><li>More silence</li><li>Do not spread the word unless asked</li><li>Efficient</li><li>A good listener</li><li>Observe the situation in silence</li><li>Able to control anger well</li><li>Stressful situations can be resolved easily because they are able to reason logically</li><li>Have good ability in collaborating with others</li></ul><br><p><b>Disadvantages</b></p><ul><li>Sometimes doing something without a specific purpose</li><li>Can be a person who only cares about himself</li><li>It\'s easy to get scared</li><li>Often feel worried</li><li>Only willing to work from behind the scenes</li><li>Often put off important things</li><li>Want to solve the problem without thinking about other aspects</li><li>Don\'t want to show emotion</li><li>Often feel unenthusiastic</li></ul>', 'phlegma.png'),
-(3, 'Melancholic', '<p><b>Characteristics</b></p><ul><li>Want to be close to the environment</li><li>Want to look good from a moral standpoint</li><li>Want to always be understood</li><li>Want to be accepted as is</li><li>Often feel insecure and do not hesitate to show it to others</li><li>Want to please others</li><li>Strive to be an independent individual</li><li>Want to be protected</li></ul><br><p><b>Advantages</b></p><ul><li>Talented</li><li>Often self-sacrifice</li><li>Don\'t hesitate to help others</li><li>Prefer to work from behind the scenes</li><li>Take pleasure in the success of others</li><li>Alone if you feel you don\'t fit in with your surroundings</li><li>Full of loyalty</li><li>Devoted to others and their work</li></ul><br><p><b>Disadvantages</b></p><ul><li>Do not like openly praised</li><li>Feelings change easily</li><li>Criticize openly</li><li>Full of negative thoughts</li><li>I want to be accepted no matter what</li><li>Does not show affection overtly</li><li>Deviate hatred for a long time</li><li>Often feel insecure in social situations</li><li>Easy to suspect</li></ul>', 'melanchole.png'),
-(4, 'Sanguine', '<p><b>Characteristics</b></p><ul><li>Nice personality</li><li>Want to look good in the eyes of the people around</li><li>Want to be famous</li><li>It\'s nice to be praised</li><li>Feel the need to be accepted no matter what the circumstances</li><li>Doesn\'t show his fear</li><li>Want attention</li><li>Freedom is the goal</li><li>Likes to be funny</li></ul><br><p><b>Advantages</b></p><ul><li>Easy to liven up</li><li>Can please others</li><li>Be friendly to anyone</li><li>Can be a good listener and give a good response</li><li>Warm personality and easy to get close to</li><li>Easy to make friends with new people</li><li>Easily moved</li><li>Don\'t hesitate to show your disappointment</li><li>Not easily offended</li><li>Creative</li></ul><br><p><b>Disadvantages</b></p><ul><li>Hard to rely on in certain situations</li><li>He doesn\'t have many close friends</li><li>Easy to forget</li><li>Sometimes undisciplined</li><li>Unstable emotion</li><li>At certain times it\'s easy to lose focus</li><li>Selfish</li><li>exaggerating</li><li>Often forces through his words</li><li>Deciding something based on feelings</li><li>Doesn\'t like being alone</li></ul>', 'sanguin.png'),
+(1, 'Choleric', '<p><b>Characteristics</b></p><ul><li>Have a good leadership spirit</li><li>Has greater strength than those peoples around</li><li>Want to look qualified especially in the field of education</li><li>Always wanting to be right</li><li>Want to be respected</li><li>Always trying to hide the fear</li><li>Pleasure oriented</li><li>Like challenges</li></ul><br><p><b>Advantages</b></p><ul><li>Independent</li><li>Have clear goals</li><li>Know how to solve problems</li><li>Can be a good organizer and executor</li><li>Visionary</li><li>Have high expectations of others</li></ul><br><p><b>Disadvantages</b></p><ul><li>Thinks he is perfect</li><li>No morals</li><li>Hard to forgive someone</li><li>Do not want to give in even though wrong</li><li>Wrong things are often brought up</li><li>Cruel</li><li>Want loyalty</li></ul>', 'choleric.png'),
+(2, 'Phlegmatic', '<p><b>Characteristics</b></p><ul><li>Calm personality and likes serenity</li><li>Want to feel the pleasure that comes from yourself</li><li>Always want to be understood</li><li>Want to be respected</li><li>Often feel insecure and do not hesitate to show it to others</li><li>Feel happy when others are happy</li><li>Have a desire to be protected</li><li>Want pleasure for yourself</li></ul><br><p><b>Advantages</b></p><ul><li>Can be a good peacemaker</li><li>More silence</li><li>Do not spread the word unless asked</li><li>Efficient</li><li>A good listener</li><li>Observe the situation in silence</li><li>Able to control anger well</li><li>Stressful situations can be resolved easily because they are able to reason logically</li><li>Have good ability in collaborating with others</li></ul><br><p><b>Disadvantages</b></p><ul><li>Sometimes doing something without a specific purpose</li><li>Can be a person who only cares about himself</li><li>It\'s easy to get scared</li><li>Often feel worried</li><li>Only willing to work from behind the scenes</li><li>Often put off important things</li><li>Want to solve the problem without thinking about other aspects</li><li>Don\'t want to show emotion</li><li>Often feel unenthusiastic</li></ul>', 'phlegmatic.png'),
+(3, 'Melancholic', '<p><b>Characteristics</b></p><ul><li>Want to be close to the environment</li><li>Want to look good from a moral standpoint</li><li>Want to always be understood</li><li>Want to be accepted as is</li><li>Often feel insecure and do not hesitate to show it to others</li><li>Want to please others</li><li>Strive to be an independent individual</li><li>Want to be protected</li></ul><br><p><b>Advantages</b></p><ul><li>Talented</li><li>Often self-sacrifice</li><li>Don\'t hesitate to help others</li><li>Prefer to work from behind the scenes</li><li>Take pleasure in the success of others</li><li>Alone if you feel you don\'t fit in with your surroundings</li><li>Full of loyalty</li><li>Devoted to others and their work</li></ul><br><p><b>Disadvantages</b></p><ul><li>Do not like openly praised</li><li>Feelings change easily</li><li>Criticize openly</li><li>Full of negative thoughts</li><li>I want to be accepted no matter what</li><li>Does not show affection overtly</li><li>Deviate hatred for a long time</li><li>Often feel insecure in social situations</li><li>Easy to suspect</li></ul>', 'melancholic.png'),
+(4, 'Sanguine', '<p><b>Characteristics</b></p><ul><li>Nice personality</li><li>Want to look good in the eyes of the people around</li><li>Want to be famous</li><li>It\'s nice to be praised</li><li>Feel the need to be accepted no matter what the circumstances</li><li>Doesn\'t show his fear</li><li>Want attention</li><li>Freedom is the goal</li><li>Likes to be funny</li></ul><br><p><b>Advantages</b></p><ul><li>Easy to liven up</li><li>Can please others</li><li>Be friendly to anyone</li><li>Can be a good listener and give a good response</li><li>Warm personality and easy to get close to</li><li>Easy to make friends with new people</li><li>Easily moved</li><li>Don\'t hesitate to show your disappointment</li><li>Not easily offended</li><li>Creative</li></ul><br><p><b>Disadvantages</b></p><ul><li>Hard to rely on in certain situations</li><li>He doesn\'t have many close friends</li><li>Easy to forget</li><li>Sometimes undisciplined</li><li>Unstable emotion</li><li>At certain times it\'s easy to lose focus</li><li>Selfish</li><li>exaggerating</li><li>Often forces through his words</li><li>Deciding something based on feelings</li><li>Doesn\'t like being alone</li></ul>', 'sanguine.png'),
 (5, 'Extroverted', '<p><b>Characteristics</b></p><ul><li>Good at getting along and put yourself in a social environment</li><li>Interacting with others is an energy-gathering activity</li><li>Confident and good at breaking the ice</li><li>Not afraid in dealing with conflicts because they know how to convey the solution</li><li>Full of energy especially in a crowded place</li><li>Prefer to tell stories because they are the center of attention</li><li>Like spontaneous activity and easier to interact with the outside world</li><li>Does not like to dwell on small things for a long time</li><li>When doing something prioritize results</li><li>Happy to work in groups</li><li>Not being able to control the conversation</li><li>Sometimes exaggerating something just to get attention</li></ul><p><b>Suitable Jobs</b></p><ul><li>Lawyer</li><li>Reporter</li><li>Sales person</li><li>Master of ceremonies (MC)</li><li>Tour guide</li><li>Event organizer</li><li>Customer service</li><li>Trainer</li><li>Musician</li><li>Actor</li><li>News anchor</li><li>Radio announcer</li></ul>', 'extroverted.png'),
 (6, 'Introverted', '<p><b>Characteristics</b></p><ul><li>Tends to prefer calm conditions</li><li>Enjoys solitude and solitary activities including energizing activities</li><li>Always thinking about things that have been done or will be done</li><li>It\'s not easy to feel comfortable in a new environment</li><li>Activities that can be done alone are his pleasure</li><li>Easy to concentrate</li><li>Not really like small talk and just small talk</li><li>Crowds are one of the most avoided things</li><li>Go out with just one or two friends</li><li>Always pay attention to your surroundings even if you don\'t interact directly</li><li>A good listener</li><li>Everything he conveys to others is the product of his long-term thinking</li><li>Usually loyal to the things he likes</li><li>It\'s not easy to get carried away by negative currents</li><li>Has unpredictable properties</li><li>Creative and have a strong memory</li></ul><p><b>Suitable Jobs</b></p><ul><li>Translator</li><li>Writer</li><li>Song writer</li><li>Artist</li><li>Editor</li><li>Graphic designer or video expert</li><li>Technician</li><li>Researcher</li><li>Accountant</li><li>Pilot</li></ul>', 'introverted.png'),
 (7, 'Ambiverted', '<p><b>Characteristics</b></p><ul><li>Awkward when meeting new people</li><li>Easily recognizes the personality of others</li><li>It\'s okay to be in a crowded place but not take the initiative to interact with others</li><li>Can adapt to the environment</li><li>Likes crowds but will be alone if you feel tired</li><li>Can adjust when talking to others</li><li>The mood changes depending on the interlocutor</li><li>Can do individual and group assignments well</li><li>Often confused when faced with two situations</li><li>There are times when he is quiet and there are times when he is loud</li><li>It\'s easy to get carried away with the crowd</li></ul><p><b>Suitable Jobs</b></p><ul><li>Businessman</li><li>Journalist</li><li>Teacher</li><li>Lawyer</li><li>Event organizer</li><li>Company manager</li><li>Marketing</li><li>Sales person</li><li>Psychologist</li><li>Human Resources Department (HRD)</li></ul>', 'ambiverted.png'),
@@ -398,17 +421,9 @@ CREATE TABLE `user_table` (
   `user_fullname` varchar(200) NOT NULL,
   `user_phone` varchar(13) DEFAULT NULL,
   `user_bio` varchar(150) DEFAULT NULL,
-  `user_level` enum('Admin','User') NOT NULL,
   `user_photo` text NOT NULL,
-  `user_status` enum('Active','Non-Active','Not verified yet') NOT NULL
+  `user_status` enum('Active','Non-Active') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `user_table`
---
-
-INSERT INTO `user_table` (`user_id`, `user_email`, `user_username`, `user_password`, `user_fullname`, `user_phone`, `user_bio`, `user_level`, `user_photo`, `user_status`) VALUES
-(1, 'personalitest@gmail.com', 'personalitest', '$2y$10$Yy9sJT5FNgsHhnDjhC3r7.farW9yJl2VjccZ3YL7/MiPYT2nkjXuC', 'Admin PersonaliTest', NULL, NULL, 'Admin', 'default.jpg', 'Active');
 
 --
 -- Indexes for dumped tables
@@ -420,6 +435,12 @@ INSERT INTO `user_table` (`user_id`, `user_email`, `user_username`, `user_passwo
 ALTER TABLE `answer_table`
   ADD PRIMARY KEY (`answer_id`),
   ADD KEY `question_answer` (`question_id`);
+
+--
+-- Indexes for table `profile_picture_table`
+--
+ALTER TABLE `profile_picture_table`
+  ADD PRIMARY KEY (`profile_picture_id`);
 
 --
 -- Indexes for table `question_table`
@@ -488,6 +509,12 @@ ALTER TABLE `answer_table`
   MODIFY `answer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=211;
 
 --
+-- AUTO_INCREMENT for table `profile_picture_table`
+--
+ALTER TABLE `profile_picture_table`
+  MODIFY `profile_picture_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
 -- AUTO_INCREMENT for table `question_table`
 --
 ALTER TABLE `question_table`
@@ -527,13 +554,13 @@ ALTER TABLE `test_table`
 -- AUTO_INCREMENT for table `token_table`
 --
 ALTER TABLE `token_table`
-  MODIFY `token_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `token_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `user_table`
 --
 ALTER TABLE `user_table`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Constraints for dumped tables

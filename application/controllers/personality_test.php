@@ -11,7 +11,7 @@
 		public function index(){
       $data['title']         = 'Personality Test';
       $data['user']          = $this->db->get_where('user_table', ['user_id' => $this->session->userdata('user_id')])->row_array();
-      $data['question_type'] = $this->db->get_where('question_type_table', ['question_type_status' => 'Available'])->result();
+      $data['question_type'] = $this->db->get('question_type_table')->result();
 
 			$this->load->view('template/v_head', $data);
 			$this->load->view('template/v_navbar', $data);
@@ -21,10 +21,10 @@
 		}
 
 		public function test($question_type_id){
-			$data['question_type'] = $this->db->get_where('question_type_table', ['question_type_id' => $question_type_id, 'question_type_status' => 'Available'])->row_array();
+			$data['question_type'] = $this->db->get_where('question_type_table', ['question_type_id' => $question_type_id])->row_array();
 			$data['title']         = 'Personality Test - '.$data['question_type']['question_type'];
       $data['user']          = $this->db->get_where('user_table', ['user_id' => $this->session->userdata('user_id')])->row_array();
-			$data['question'] 		 = $this->db->get_where('question_table', ['question_type_id' => $question_type_id, 'question_status' => 'Available'])->result();
+			$data['question'] 		 = $this->db->get_where('question_table', ['question_type_id' => $question_type_id])->result();
 
 			if($data['question_type']){
 				$this->load->view('template/v_head', $data);
@@ -68,7 +68,8 @@
 				'user_id' 				 		 => $this->session->userdata('user_id'),
 				'question_type_id' 		 => $question_type_id,
 				'result_most_selected' => 'A',
-				'test_result_date' 		 => date('Y-m-d H:i:s')
+				'test_result_date' 		 => date('Y-m-d H:i:s'),
+				'test_result_status'   => 'Available'
 			];
 			$this->db->insert('test_result_table', $data);
 

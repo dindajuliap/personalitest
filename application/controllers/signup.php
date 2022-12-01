@@ -60,9 +60,8 @@
           'user_username' => $user_username,
           'user_phone'    => $user_phone,
           'user_password' => $user_password,
-          'user_level'    => 'User',
           'user_photo'    => 'default.jpg',
-          'user_status'   => 'Not verified yet'
+          'user_status'   => 'Non-Active'
         ];
 
         function randomString($length = 15){

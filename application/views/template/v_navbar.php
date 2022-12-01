@@ -23,7 +23,14 @@
         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
           <a class="dropdown-item" href="<?= base_url('profile/'.$user['user_username']) ?>">
             <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-            Profile
+            Your Profile
+          </a>
+
+          <div class="dropdown-divider"></div>
+
+          <a class="dropdown-item" href="<?= base_url('setting') ?>">
+            <i class="fas fa-cog fa-sm fa-fw mr-2 text-gray-400"></i>
+            Setting
           </a>
 
           <div class="dropdown-divider"></div>

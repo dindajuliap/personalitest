@@ -41,21 +41,12 @@
               $this->session->set_userdata($data);
               $this->session->set_flashdata('success','Welcome, '.$user['user_fullname'].'!');
 
-              if($user['user_level'] == 'User'){
-                redirect('home');
-              }
-              else{
-                redirect('admin');
-              }
+              redirect('home');
             }
             else{
               $this->session->set_flashdata('message', '<div class="alert alert-danger alert-dismissible fade show alert-dismissible fade show" role="alert">Wrong password.</div>');
               redirect('signin');
             }
-          }
-          elseif($user['user_status'] == "Non-active"){
-            $this->session->set_flashdata('message', '<div class="alert alert-danger alert-dismissible fade show alert-dismissible fade show text-sm" role="alert">Account was deleted.</div>');
-            redirect('signin');
           }
           else{
             $this->session->set_flashdata('message', '<div class="alert alert-danger alert-dismissible fade show alert-dismissible fade show" role="alert">Check your email and verify account.</div>');

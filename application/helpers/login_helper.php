@@ -17,39 +17,3 @@
 			redirect('home');
 		}
 	}
-
-	function check_not_admin(){
-		$ci =& get_instance();
-		$user_session = $ci->session->userdata('user_level');
-
-		if($user_session != 'Admin'){
-			redirect($_SERVER['HTTP_REFERER']);
-		}
-	}
-
-	function check_admin(){
-		$ci =& get_instance();
-		$user_session = $ci->session->userdata('user_level');
-
-		if($user_session == 'Admin'){
-			redirect($_SERVER['HTTP_REFERER']);
-		}
-	}
-
-	function check_not_user(){
-		$ci =& get_instance();
-		$user_session = $ci->session->userdata('user_level');
-
-		if($user_session != 'User'){
-			redirect($_SERVER['HTTP_REFERER']);
-		}
-	}
-
-	function check_user(){
-		$ci =& get_instance();
-		$user_session = $ci->session->userdata('user_level');
-
-		if($user_session == 'User'){
-			redirect($_SERVER['HTTP_REFERER']);
-		}
-	}
