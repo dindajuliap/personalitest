@@ -19,20 +19,13 @@
 			$data['result'] = $this->db->get_where('test_result_table', ['user_id' => $data['user']['user_id'], 'test_result_status' => 'Available'])->result();
 
 			$this->db->where_not_in('profile_picture', $data['user']['user_photo']);
-			$this->db->order_by('rand()');
+			$this->db->order_by('profile_picture_id', 'ASC');
 			$data['profile_picture'] = $this->db->get('profile_picture_table')->result();
 
 			$this->load->view('template/v_head', $data);
 			$this->load->view('template/v_navbar', $data);
 			$this->load->view('v_profile');
-
-			if($data['result']){
-				$this->load->view('template/v_footer');
-			}
-			else{
-				$this->load->view('template/v_sticky_footer');
-			}
-
+			$this->load->view('template/v_footer');
 			$this->load->view('template/v_foot');
 		}
 	}

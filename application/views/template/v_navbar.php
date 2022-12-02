@@ -28,9 +28,9 @@
 
           <div class="dropdown-divider"></div>
 
-          <a class="dropdown-item" href="<?= base_url('setting') ?>">
-            <i class="fas fa-cog fa-sm fa-fw mr-2 text-gray-400"></i>
-            Setting
+          <a class="dropdown-item" href="<?= base_url('change-password') ?>">
+            <i class="fas fa-lock fa-sm fa-fw mr-2 text-gray-400"></i>
+            Change Your Password
           </a>
 
           <div class="dropdown-divider"></div>

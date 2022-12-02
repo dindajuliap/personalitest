@@ -15,6 +15,7 @@
 			$this->load->view('template/v_head', $data);
 			$this->load->view('template/v_navbar', $data);
 			$this->load->view('v_home');
+			$this->load->view('template/v_footer');
 			$this->load->view('template/v_foot');
 		}
 	}

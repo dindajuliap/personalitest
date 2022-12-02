@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 01, 2022 at 10:51 AM
+-- Generation Time: Dec 02, 2022 at 03:45 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -210,14 +210,15 @@ CREATE TABLE `profile_picture_table` (
 --
 
 INSERT INTO `profile_picture_table` (`profile_picture_id`, `profile_picture`) VALUES
-(1, 'avatar-1.png'),
-(2, 'avatar-2.png'),
-(3, 'avatar-3.png'),
-(4, 'avatar-4.png'),
-(5, 'avatar-5.png'),
-(6, 'avatar-6.png'),
-(7, 'avatar-7.png'),
-(8, 'avatar-8.png');
+(1, 'default.png'),
+(2, 'avatar-1.png'),
+(3, 'avatar-2.png'),
+(4, 'avatar-3.png'),
+(5, 'avatar-4.png'),
+(6, 'avatar-5.png'),
+(7, 'avatar-6.png'),
+(8, 'avatar-7.png'),
+(9, 'avatar-8.png');
 
 -- --------------------------------------------------------
 
@@ -420,7 +421,7 @@ CREATE TABLE `user_table` (
   `user_password` varchar(200) NOT NULL,
   `user_fullname` varchar(200) NOT NULL,
   `user_phone` varchar(13) DEFAULT NULL,
-  `user_bio` varchar(150) DEFAULT NULL,
+  `user_bio` varchar(100) DEFAULT NULL,
   `user_photo` text NOT NULL,
   `user_status` enum('Active','Non-Active') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -512,7 +513,7 @@ ALTER TABLE `answer_table`
 -- AUTO_INCREMENT for table `profile_picture_table`
 --
 ALTER TABLE `profile_picture_table`
-  MODIFY `profile_picture_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `profile_picture_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `question_table`
@@ -554,7 +555,7 @@ ALTER TABLE `test_table`
 -- AUTO_INCREMENT for table `token_table`
 --
 ALTER TABLE `token_table`
-  MODIFY `token_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `token_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `user_table`

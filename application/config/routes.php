@@ -60,3 +60,4 @@ $route['profile/(:any)']                 = 'profile/index/$1';
 $route['personality-test']               = 'personality_test';
 $route['personality-test/(:any)']        = 'personality_test/test/$1';
 $route['personality-test/result/(:any)'] = 'result/index/$1';
+$route['change-password']                = 'setting/password';

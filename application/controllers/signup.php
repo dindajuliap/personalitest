@@ -16,7 +16,7 @@
       $this->form_validation->set_rules('user_username', 'Username', 'required|trim|is_unique[user_table.user_username]|max_length[200]|min_length[8]|alpha_numeric');
       $this->form_validation->set_rules('user_phone', 'Phone number', 'required|trim|numeric|min_length[11]|max_length[13]|is_unique[user_table.user_phone]|greater_than[0]', ['numeric' => 'Phone number is invalid.', 'greater_than' => 'Phone number is invalid.', 'min_length' => 'Phone number is invalid.', 'max_length' => 'Phone number is invalid.']);
       $this->form_validation->set_rules('user_password', 'Password', 'required|trim|min_length[8]|matches[password_confirmation]');
-      $this->form_validation->set_rules('password_confirmation', 'Password confirmation', 'required|trim|matches[user_password]');
+      $this->form_validation->set_rules('password_confirmation', 'Password', 'required|trim|matches[user_password]');
 
       if($this->form_validation->run() == FALSE){
     		$this->load->view('template/v_head', $data);
@@ -60,7 +60,7 @@
           'user_username' => $user_username,
           'user_phone'    => $user_phone,
           'user_password' => $user_password,
-          'user_photo'    => 'default.jpg',
+          'user_photo'    => 'default.png',
           'user_status'   => 'Non-Active'
         ];
 

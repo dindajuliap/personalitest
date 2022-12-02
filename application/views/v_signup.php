@@ -42,7 +42,7 @@
           </div>
 
           <div class="col-lg-6 col-md-6 col-sm-6">
-            <input type="password" name="password_confirmation" class="form-control" id="password_confirmation" placeholder="Password confirmation">
+            <input type="password" name="password_confirmation" class="form-control" id="password_confirmation" placeholder="Confirm password">
             <span id="show2" onclick="show2()"><i class="fa fa-eye icon"></i></span>
           </div>
         </div>
