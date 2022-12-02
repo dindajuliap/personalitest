@@ -6,7 +6,7 @@
           <img id="illustration" src="<?= base_url('assets/img/question-type/'.$key->question_type_cover) ?>">
     			<h5 class="mt-2"><b><?= $key->question_type ?></b></h5>
     			<p><?= $key->question_type_description ?></p>
-          <a href="<?= base_url('personality-test/'.$key->question_type_id) ?>" class="btn" id="link">Take the Test</a>
+          <a href="<?= base_url('personality-test/'.$key->question_type_id) ?>" class="btn" id="link">Take This Test</a>
         </div>
       </div>
     <?php endforeach ?>

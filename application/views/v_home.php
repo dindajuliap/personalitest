@@ -12,10 +12,10 @@
   </a>
 </div>
 
-<div class="row mx-0 mt-3 mb-3">
+<div class="row mx-0 mt-3">
   <div class="col-lg-12 col-md-12 col-sm-12">
     <div class="text-center">
-      <img src="<?= base_url('assets/img/photo-3.png') ?>" id="illustration">
+      <img src="<?= base_url('assets/img/picture-3.png') ?>" id="illustration">
     </div>
   </div>
 </div>

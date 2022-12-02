@@ -1,6 +1,6 @@
 <div class="row" id="row">
   <div class="col-lg-5 col-md-12 col-sm-12 text-lg-right text-sm-center text-md-center" id="col1">
-    <img src="<?= base_url('assets/img/photo-1.png') ?>" id="illustration">
+    <img src="<?= base_url('assets/img/picture-1.png') ?>" id="illustration">
   </div>
 
   <div class="col-lg-7 col-md-12 col-sm-12" id="col2">
