@@ -9,8 +9,8 @@
 
   <?php if($this->session->userdata('signin_status') == TRUE) : ?>
     <div class="navbar-nav">
-      <a class="nav-link <?php if($title == 'Home') : ?>active<?php endif ?>" href="<?= base_url('home') ?>">Home</a></b>
-      <a class="nav-link <?php if($title == 'Personality Test') : ?>active<?php endif ?>" href="<?= base_url('personality-test') ?>">Personality Test</a></b>
+      <a class="nav-link <?php if($title == 'Home') : ?>active<?php endif ?>" href="<?= base_url('home') ?>">Home</a>
+      <a class="nav-link <?php if($title == 'Personality Test') : ?>active<?php endif ?>" href="<?= base_url('personality-test') ?>">Personality Test</a>
     </div>
 
     <ul class="navbar-nav ml-auto">
